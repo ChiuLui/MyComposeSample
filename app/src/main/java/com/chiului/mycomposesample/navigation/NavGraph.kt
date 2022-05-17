@@ -10,7 +10,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import com.chiului.mycomposesample.ui.SightedMode
 import com.chiului.mycomposesample.ui.ViMode
-import com.chiului.mycomposesample.ui.WeBottomBar
+import com.chiului.mycomposesample.ui.WeHome
 import com.chiului.mycomposesample.utils.TalkBackUtil
 import com.chiului.mycomposesample.vip.*
 
@@ -58,7 +58,7 @@ fun NavGraphBuilder.googleSampleGraph(navController: NavController) {
 
 fun NavGraphBuilder.wechatGraph(navController: NavController) {
     navigation(startDestination = NavConstant.WECHAT_HOME, NavConstant.WECHAT) {
-        composable(NavConstant.WECHAT_HOME) { WeBottomBar() }
+        composable(NavConstant.WECHAT_HOME) { WeHome() }
     }
 }
 
