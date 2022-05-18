@@ -1,6 +1,9 @@
 package com.chiului.mycomposesample.ui.wechat
 
-import androidx.compose.runtime.*
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.chiului.mycomposesample.R
 import com.chiului.mycomposesample.ui.wechat.ui.theme.WeComposeTheme
@@ -14,8 +17,6 @@ import com.rengwuxian.wecompose.data.User
  * @date      2022/05/18 01:26
  */
 class WeViewModel : ViewModel() {
-
-    var selectTab by mutableStateOf(0)
 
     var theme by mutableStateOf(WeComposeTheme.Theme.Light)
 
