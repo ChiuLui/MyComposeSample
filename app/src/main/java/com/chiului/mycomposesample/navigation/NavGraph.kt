@@ -11,6 +11,8 @@ import androidx.navigation.navigation
 import com.chiului.mycomposesample.ui.SightedMode
 import com.chiului.mycomposesample.ui.ViMode
 import com.chiului.mycomposesample.ui.WeHome
+import com.chiului.mycomposesample.ui.googlesample.GoogleSampleBasics
+import com.chiului.mycomposesample.ui.googlesample.GoogleSampleHome
 import com.chiului.mycomposesample.utils.TalkBackUtil
 import com.chiului.mycomposesample.vip.*
 
@@ -51,8 +53,11 @@ fun NavGraph() {
 fun NavGraphBuilder.googleSampleGraph(navController: NavController) {
     navigation(startDestination = NavConstant.GOOGLE_SAMPLE_HOME, NavConstant.GOOGLE_SAMPLE) {
         composable(NavConstant.GOOGLE_SAMPLE_HOME) {
-
+            GoogleSampleHome {
+                navController.navigate(it)
+            }
         }
+        composable(NavConstant.GOOGLE_SAMPLE_BASICS) { GoogleSampleBasics() }
     }
 }
 
