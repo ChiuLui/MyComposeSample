@@ -62,4 +62,6 @@ dependencies {
     // Jetpack Compose Integration
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
+    implementation 'com.google.accompanist:accompanist-pager:0.21.1-beta'
+
 }
