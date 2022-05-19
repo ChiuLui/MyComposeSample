@@ -33,7 +33,13 @@ fun GoogleSampleLayout() {
 
 @Composable
 fun PhotographerCard(modifier: Modifier = Modifier) {
-    Row (modifier.padding(8.dp).clip(RoundedCornerShape(4.dp)).background(MaterialTheme.colors.surface).clickable {  }.padding(16.dp)) {
+    Row (
+        modifier
+            .padding(8.dp)
+            .clip(RoundedCornerShape(4.dp))
+            .background(MaterialTheme.colors.surface)
+            .clickable { }
+            .padding(16.dp)) {
         Surface(
             modifier = Modifier.size(50.dp),
             shape = CircleShape,
@@ -42,7 +48,9 @@ fun PhotographerCard(modifier: Modifier = Modifier) {
 
         }
         Column(
-            modifier = Modifier.padding(start = 8.dp).align(Alignment.CenterVertically)
+            modifier = Modifier
+                .padding(start = 8.dp)
+                .align(Alignment.CenterVertically)
         ) {
             Text("Alfred Sisley", fontWeight = FontWeight.Bold)
             // LocalContentAlpha is defining opacity level of its children
@@ -60,7 +68,6 @@ fun PhotographerCardPreview() {
         PhotographerCard()
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable

@@ -17,7 +17,19 @@ object NavConstant {
     const val GOOGLE_SAMPLE_BASICS = "google_sample_basics"
     const val GOOGLE_SAMPLE_BASICS_CODELAB = "google_sample_basics_codelab"
     const val GOOGLE_SAMPLE_LAYOUT = "google_sample_layout"
-    val GOOGLE_SAMPLE_PAGE_LIST = listOf(GOOGLE_SAMPLE_BASICS, GOOGLE_SAMPLE_BASICS_CODELAB, GOOGLE_SAMPLE_LAYOUT)
+    const val GOOGLE_SAMPLE_LAYOUT_CODELAB = "google_sample_layout_codelab"
+    const val GOOGLE_SAMPLE_SIMPLE_CUSTOM_LAYOUT = "google_sample_simple_custom_layout"
+    const val GOOGLE_SAMPLE_COMPLICATED_CUSTOM_LAYOUT = "google_sample_complicated_custom_layout"
+    const val GOOGLE_SAMPLE_CONSTRAINT_LAYOUT = "google_sample_constraint_layout"
+    val GOOGLE_SAMPLE_PAGE_LIST = listOf(
+        GOOGLE_SAMPLE_BASICS,
+        GOOGLE_SAMPLE_BASICS_CODELAB,
+        GOOGLE_SAMPLE_LAYOUT,
+        GOOGLE_SAMPLE_LAYOUT_CODELAB,
+        GOOGLE_SAMPLE_SIMPLE_CUSTOM_LAYOUT,
+        GOOGLE_SAMPLE_COMPLICATED_CUSTOM_LAYOUT,
+        GOOGLE_SAMPLE_CONSTRAINT_LAYOUT
+    )
 
     const val WECHAT_HOME = "wechat_home"
 
