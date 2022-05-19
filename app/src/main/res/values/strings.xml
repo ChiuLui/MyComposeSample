@@ -12,4 +12,7 @@
     <string name="title_activity_we_home">WeHomeActivity</string>
     <string name="title_activity_en_ableactivity">EnABLEActivity</string>
     <string name="title_activity_enable_location">EnableLocationActivity</string>
+    <string name="show_less">Show less</string>
+    <string name="show_more">Show more</string>
+
 </resources>
