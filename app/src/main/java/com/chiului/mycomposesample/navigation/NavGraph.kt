@@ -14,6 +14,7 @@ import com.chiului.mycomposesample.ui.WeHome
 import com.chiului.mycomposesample.ui.googlesample.GoogleSampleBasics
 import com.chiului.mycomposesample.ui.googlesample.GoogleSampleBasicsCodelab
 import com.chiului.mycomposesample.ui.googlesample.GoogleSampleHome
+import com.chiului.mycomposesample.ui.googlesample.GoogleSampleLayout
 import com.chiului.mycomposesample.utils.TalkBackUtil
 import com.chiului.mycomposesample.vip.*
 
@@ -60,6 +61,7 @@ fun NavGraphBuilder.googleSampleGraph(navController: NavController) {
         }
         composable(NavConstant.GOOGLE_SAMPLE_BASICS) { GoogleSampleBasics() }
         composable(NavConstant.GOOGLE_SAMPLE_BASICS_CODELAB) { GoogleSampleBasicsCodelab() }
+        composable(NavConstant.GOOGLE_SAMPLE_LAYOUT) { GoogleSampleLayout() }
     }
 }
 
