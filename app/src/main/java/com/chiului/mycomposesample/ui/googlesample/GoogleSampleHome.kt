@@ -1,10 +1,10 @@
 package com.chiului.mycomposesample.ui.googlesample
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -22,15 +22,12 @@ import com.chiului.mycomposesample.navigation.NavConstant.GOOGLE_SAMPLE_PAGE_LIS
 @Composable
 fun GoogleSampleHome(onSelectPage: (page: String) -> Unit) {
     LazyColumn(modifier = Modifier.fillMaxWidth()) {
-        items(GOOGLE_SAMPLE_PAGE_LIST.size) {
-            Column(
-                Modifier.fillMaxWidth().clickable { onSelectPage(GOOGLE_SAMPLE_PAGE_LIST[it]) }) {
-                Text(
-                    text = GOOGLE_SAMPLE_PAGE_LIST[it],
-                    fontSize = 14.sp,
-                    modifier = Modifier.padding(15.dp)
-                )
-            }
+        items(GOOGLE_SAMPLE_PAGE_LIST) {
+            Text(
+                text = it,
+                fontSize = 14.sp,
+                modifier = Modifier.fillMaxWidth().clickable { onSelectPage(it) }.padding(15.dp)
+            )
         }
     }
 }

@@ -63,6 +63,7 @@ fun NavGraphBuilder.googleSampleGraph(navController: NavController) {
         composable(NavConstant.GOOGLE_SAMPLE_SIMPLE_CUSTOM_LAYOUT) { GoogleSampleSimpleCustomLayout() }
         composable(NavConstant.GOOGLE_SAMPLE_COMPLICATED_CUSTOM_LAYOUT) { GoogleSampleComplicatedCustomLayout() }
         composable(NavConstant.GOOGLE_SAMPLE_CONSTRAINT_LAYOUT) { GoogleSampleConstraintLayout() }
+        composable(NavConstant.GOOGLE_SAMPLE_STATE) { GoogleSampleState() }
     }
 }
 
