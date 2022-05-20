@@ -12,6 +12,7 @@ import com.chiului.mycomposesample.ui.SightedMode
 import com.chiului.mycomposesample.ui.ViMode
 import com.chiului.mycomposesample.ui.WeHome
 import com.chiului.mycomposesample.ui.googlesample.*
+import com.chiului.mycomposesample.ui.googlesample.theming.ThemingHome
 import com.chiului.mycomposesample.utils.TalkBackUtil
 import com.chiului.mycomposesample.vip.*
 
@@ -64,6 +65,7 @@ fun NavGraphBuilder.googleSampleGraph(navController: NavController) {
         composable(NavConstant.GOOGLE_SAMPLE_COMPLICATED_CUSTOM_LAYOUT) { GoogleSampleComplicatedCustomLayout() }
         composable(NavConstant.GOOGLE_SAMPLE_CONSTRAINT_LAYOUT) { GoogleSampleConstraintLayout() }
         composable(NavConstant.GOOGLE_SAMPLE_STATE) { GoogleSampleState() }
+        composable(NavConstant.GOOGLE_SAMPLE_THEME) { ThemingHome() }
     }
 }
 
