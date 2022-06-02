@@ -13,14 +13,17 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusOrder
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.chiului.mycomposesample.data.TodoItem
 import com.chiului.mycomposesample.ui.theme.MyDefaultTheme
 import com.chiului.mycomposesample.viewmodel.TodoViewModel
+import kotlinx.coroutines.delay
 
 /**
  * https://developer.android.google.cn/codelabs/jetpack-compose-state
@@ -71,7 +74,14 @@ fun TodoScreen(
         var edit by remember {
             mutableStateOf("简单的TextField")
         }
-        val keyboardController = LocalSoftwareKeyboardController.current
+
+        var focusRequester = FocusRequester()
+
+        LaunchedEffect(Unit) {
+            delay(1000)
+            focusRequester.requestFocus()
+        }
+
         TextField(
             value = edit,
             onValueChange = {edit = it},
@@ -80,8 +90,10 @@ fun TodoScreen(
             keyboardOptions = KeyboardOptions.Default.copy(imeAction = androidx.compose.ui.text.input.ImeAction.Done),
             keyboardActions = KeyboardActions(onDone = {
                 onAddItem(TodoItem(edit))
-                keyboardController?.hide()
-            })
+            }),
+            modifier = Modifier.focusOrder{
+                this.previous
+            }.focusRequester(focusRequester)
         )
 
         TextButton(
